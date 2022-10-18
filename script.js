@@ -43,7 +43,6 @@ const total = () => {
     !buttonTipCustom.classList.contains("active--custom")
   ) {
     buttonsTipPercentages();
-    console.log("btn tip");
 
     //only tip custom
   } else if (
@@ -51,19 +50,15 @@ const total = () => {
     NumberOfPeopleInput.value === ""
   ) {
     totalWithCustomTip();
-    console.log("custom tip");
   }
 
   //bill without tip but ppl selected
   else if (NumberOfPeopleInput.value !== "" && !checkForNullsInNOP()) {
     totalWithNumberOfPerson();
-    console.log("everything else except");
   } else if (checkForNullsInNOP()) {
     setTotalDefault();
-    console.log("removing");
   } else {
     totalEqualBill();
-    console.log("total = bill");
   }
 
   maxNumberOfDigits();
@@ -163,7 +158,6 @@ const totalWithCustomTip = () => {
   ) {
     tipPerPerson();
     customTipSelected();
-    console.log("Divided by NOP");
   } else if (
     buttonTipCustom.value !== "" &&
     billInput.value !== "" &&
@@ -173,14 +167,12 @@ const totalWithCustomTip = () => {
       Number(billInput.value) +
       Number((billInput.value * buttonTipCustom.value) / 100)
     ).toFixed(2)}`;
-    console.log("NOP is empty");
   } else if (
     NumberOfPeopleInput.value !== "" &&
     buttonTipCustom.value === "" &&
     billInput.value !== ""
   ) {
     buttonTipCustom.classList.remove("active--custom");
-    console.log(totalWithNumberOfPerson());
     totalWithNumberOfPerson();
   } else if (
     checkForNullsInNOP() &&
@@ -188,11 +180,9 @@ const totalWithCustomTip = () => {
     billInput.value !== ""
   ) {
     setTotalDefault();
-    console.log(setTotalDefault());
   } else {
     buttonTipCustom.classList.remove("active--custom");
     totalEqualBill();
-    console.log("removing active class");
   }
   maxNumberOfDigits();
   smallerTotalFontSize();
