@@ -12,7 +12,7 @@ I would like to try in a while to shorten some of the functions used in the code
 
 # What have I learned in this project?
 
-I learned how to read technical documentation, how to improve code, how to troubleshoot when something wasn't working
+I learned how to read technical documentation, how to try to improve the code, how to deal with problems I didn't even think existed, and it came out during my work. In addition, I practiced the BEM methodology, working with bootstrap and also the use of SASS
 
 # What made me most of the problems?
 
