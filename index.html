@@ -32,12 +32,7 @@
                   <p class="info">Bill</p>
                 </div>
                 <div class="col-12 bill__input">
-                  <input
-                    id="bill"
-                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');updateTotalValue();"
-                    type="text"
-                    placeholder="0"
-                  />
+                  <input id="bill" type="text" placeholder="0" />
                   <img src="./images/icon-dollar.svg" alt="dollar" />
                 </div>
               </div>
@@ -47,24 +42,23 @@
                 </div>
                 <div class="row tip__buttons">
                   <div class="col-6 col-lg-4">
-                    <button class="btn-tip 5" id="5">5%</button>
+                    <button class="btn-tip btn-tip-5">5%</button>
                   </div>
                   <div class="col-6 col-lg-4">
-                    <button class="btn-tip 10" id="10">10%</button>
+                    <button class="btn-tip btn-tip-10">10%</button>
                   </div>
                   <div class="col-6 col-lg-4">
-                    <button class="btn-tip 15" id="15">15%</button>
+                    <button class="btn-tip btn-tip-15">15%</button>
                   </div>
                   <div class="col-6 col-lg-4">
-                    <button class="btn-tip 25" id="25">25%</button>
+                    <button class="btn-tip btn-tip-25">25%</button>
                   </div>
                   <div class="col-6 col-lg-4">
-                    <button class="btn-tip 50" id="50">50%</button>
+                    <button class="btn-tip btn-tip-50">50%</button>
                   </div>
                   <div class="col-6 col-lg-4">
                     <input
                       id="custom"
-                      oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g);totalWithCustomTip()"
                       type="text"
                       maxlength="3"
                       placeholder="Custom"
@@ -78,7 +72,6 @@
                   <div class="col-12 people__input">
                     <input
                       id="people"
-                      oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g);totalWithNumberOfPerson();"
                       type="text"
                       placeholder="0"
                       maxlength="3"
@@ -102,7 +95,8 @@
                       <span>/ person</span>
                     </div>
                     <div class="col-8 summary__cost">
-                      <span id="tip" class="cost">$0.00</span>
+                      <span class="cost">$</span>
+                      <span id="tip" class="cost">0.00</span>
                     </div>
                   </div>
                 </div>
@@ -114,7 +108,8 @@
                       <span>/ person</span>
                     </div>
                     <div class="col-9 summary__cost">
-                      <span id="total" class="cost">$0.00</span>
+                      <span class="cost">$</span>
+                      <span id="total" class="cost">0.00</span>
                     </div>
                   </div>
                 </div>
